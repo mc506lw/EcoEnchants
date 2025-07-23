@@ -1,8 +1,11 @@
 name: Build and Release
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'  # 例如 v1.0.0
 
 jobs:
   build:
